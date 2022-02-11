@@ -197,7 +197,7 @@ module.exports = {
           if (!('sBye' in chat)) chat.sBye = ''
           if (!('sPromote' in chat)) chat.sPromote = ''
           if (!('sDemote' in chat)) chat.sDemote = ''
-          if (!('descUpdate' in chat)) chat.descUpdate = true
+          if (!('descUpdate' in chat)) chat.descUpdate = false
           if (!('delete' in chat)) chat.delete = false
           if (!('antiBadword' in chat)) chat.antiBadword = true
           if (!('rpg' in chat)) chat.delete = true
@@ -212,9 +212,9 @@ module.exports = {
           sBye: '',
           sPromote: '',
           sDemote: '',
-          descUpdate: true,
+          descUpdate: false,
           delete: false,
-          rpg: true,
+          rpg: false,
           nsfw: false,
           antiBadword: true,
           antiLink: false,
@@ -236,7 +236,7 @@ module.exports = {
           if (!isNumber(settings.status)) settings.status = 0
         } else global.db.data.settings[this.user.jid] = {
           anon: true,
-          anticall: true,
+          anticall: false,
           antispam: true,
           antitroli: true,
           backup: false,
