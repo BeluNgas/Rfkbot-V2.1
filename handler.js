@@ -201,7 +201,7 @@ module.exports = {
           if (!('delete' in chat)) chat.delete = false
           if (!('antiBadword' in chat)) chat.antiBadword = true
           if (!('rpg' in chat)) chat.delete = true
-          if (!('nsfw' in chat)) chat.delete = false
+          if (!('nsfw' in chat)) chat.delete = true
           if (!('antiLink' in chat)) chat.antiLink = false
           if (!('viewonce' in chat)) chat.viewonce = true
         } else global.db.data.chats[m.chat] = {
@@ -215,7 +215,7 @@ module.exports = {
           descUpdate: false,
           delete: false,
           rpg: true,
-          nsfw: false,
+          nsfw: true,
           antiBadword: true,
           antiLink: false,
           viewonce: true,
